@@ -7,6 +7,8 @@ const NFTDropPage = () => {
   const address = useAddress();
   const disconnect = useDisconnect();
 
+  console.log(address)
+
   return (
     <section className='flex flex-col h-screen lg:grid lg:grid-cols-10'>
         {/* Left */}
@@ -28,9 +30,11 @@ const NFTDropPage = () => {
           {/* header */}
           <header className='flex items-center justify-between'>
             <h1 className='text-xl cursor-pointer w-52 sm:w-80 font-extralight'>Mira NFT Marketplace</h1>
-            <button className='px-4 py-2 text-xs text-white bg-purple-600 rounded-full lg:px-5 lg:py-3 lg:text-base hover:bg-purple-700'>Sign In</button>
+            <button onClick={() => (address ? disconnect() : connectWithMetamask())} className='px-4 py-2 text-xs text-white bg-purple-600 rounded-full lg:px-5 lg:py-3 lg:text-base hover:bg-purple-700'>{address ? 'Sign Out' : 'Sign In'}</button>
           </header>
           <hr className='my-3' />
+
+          {address && <p className='text-center text-purple-600'>You're logged in with wallet: <strong>{address.substring(0, 5)}...{address.substring(address.length - 5)}</strong></p>}
 
           {/* content */}
           <div className='flex flex-col items-center flex-1 mt-10 space-y-6 text-center lg:space-y-0 lg:justify-center'>
