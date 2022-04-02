@@ -7,7 +7,7 @@ const Home: NextPage = () => {
     <div className="">
       <Head>
         <title>Mira NFT Marketplace</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/nft.png" />
       </Head>
 
       <h2>Mira NFT Marketplace</h2>
