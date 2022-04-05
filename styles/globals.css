@@ -1,19 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
-
-* {
+*, html, body {
     font-family: 'Questrial', sans-serif !important;
 }
 
-a, p, h1, h2, h3, h4 {
+a, p, h1, h2, h3, h4, h5, h6, span, small {
     font-family: 'Questrial', sans-serif !important;
 }
 
-@layer base {
-  html {
-    font-family: 'Questrial', sans-serif !important;
-  }
-}
